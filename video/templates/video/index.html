@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+    {% for user in users %}
+        <li>
+            <a href="{% url 'awemes' user.id %}">{{ user.user_name }}</a>
+            <a href="{% url 'fetch_awemes' user.user_id %}">get awemes</a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
